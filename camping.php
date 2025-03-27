@@ -185,5 +185,36 @@
         </div>
     </div>
 
+            <div class="flex justify-center font-bold text-3xl mt-10">Avis ! (pas encore fonctionnel)</div>
+
+            <div class="flex justify-center my-10">
+    <div class="w-full max-w-2xl bg-white p-8 rounded-lg shadow-md">
+        <?php if(isset($_GET['success'])): ?>
+            <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
+                Merci pour votre avis! Il a bien été enregistré.
+            </div>
+        <?php endif; ?>
+        
+        <form action="submit-review.php" method="post" class="space-y-6">
+            <div>
+                <label for="id_utilisateur" class="block text-sm font-medium text-gray-700">Nom</label>
+                <input type="text" id="id_utilisateur" name="id_utilisateur" required
+                       class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2 border">
+            </div>
+            <div>
+                <label for="commentaire" class="block text-sm font-medium text-gray-700">Votre commentaire</label>
+                <textarea id="commentaire" name="commentaire" rows="4" required
+                          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2 border"></textarea>
+            </div>
+            
+            <div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    Envoyer l'avis
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
 </body>
 </html>
