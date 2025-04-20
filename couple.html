@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>COUPLE</title>
+  <style>
+
+    @keyframes flash {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .flash {
+      animation: flash 1s infinite;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      50% { transform: translateX(5px); }
+      75% { transform: translateX(-3px); }
+    }
+
+    .shake {
+      animation: shake 0.4s infinite;
+    }
+  </style>
+</head>
+<body class="relative h-screen overflow-hidden bg-black">
+
+  <video 
+    autoplay 
+    muted 
+    loop 
+    playsinline 
+    class="absolute top-0 left-0 w-full h-full object-cover z-[-2] brightness-50 scale-125">
+    <source src="images/alerte.mp4" type="video/mp4" />
+  </video>
+
+
+
+  <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4 space-y-6">
+
+    <div class="text-6xl flash shake text-red-500">🚨</div>
+
+    <h1 class="text-4xl md:text-6xl font-extrabold uppercase text-red-500 shake">
+      TU ES MALADE D'AVOIR CLIQUÉ ICI !!!
+    </h1>
+
+    <h2 class="text-xl md:text-2xl text-white font-medium animate-pulse">
+      Le terrain est miné, change de cible
+    </h2>
+
+    <a href="camping.html" class="text-base md:text-lg px-6 py-2 bg-red-600 hover:bg-red-800 transition rounded-full shadow-lg animate-bounce">
+      Juste ici
+    </a>
+
+    <div class="text-6xl flash shake text-red-500">🚨</div>
